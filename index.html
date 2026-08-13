@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Now</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-icon"></span>
+        
+            <img class="" src="./assets/images/logo.svg">
+        </div>
+
+        <div class="units-dropdown">
+
+            <button id="units-btn">
+                ⚙ Units ▼
+            </button>
+
+            <div class="units-menu">
+
+                <h3>Switch Units</h3>
+
+                <label>Temperature</label>
+
+                <select id="temperature-unit">
+                    <option value="celsius">Celsius (°C)</option>
+                    <option value="fahrenheit">Fahrenheit (°F)</option>
+                </select>
+
+                <label>Wind Speed</label>
+
+                <select id="wind-unit">
+                    <option value="kmh">km/h</option>
+                    <option value="mph">mph</option>
+                </select>
+
+                <label>Precipitation</label>
+
+                <select id="precipitation-unit">
+                    <option value="mm">Millimeters (mm)</option>
+                    <option value="inch">Inches (in)</option>
+                </select>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <section class="search-section">
+
+        <h1 id="weather-title">
+            How's the sky looking today?
+        </h1>
+
+        <div class="search-box">
+
+            <input
+                id="city-input"
+                type="text"
+                placeholder="Search for a place...">
+
+            <button id="search-button">
+                Search
+            </button>
+        <div id="history"></div>
+
+        </div>
+         
+        
+        <p id="loading-message"></p>
+        <p id="error-message"></p>
+
+    </section>
+      
+    
+
+    <main class="main-grid">
+
+
+        <div class="left-panel">
+
+            
+
+            <section class="hero-card">
+
+                <div>
+
+                    <h2 id="city-name">
+                        City Name
+                    </h2>
+
+                    <p id="current-date">
+                        Date
+                    </p>
+
+                </div>
+
+                <div class="hero-weather">
+
+                    <div id="hero-icon" class="hero-icon">
+                        ☀️
+                    </div>
+
+                    <h1 id="hero-temperature">
+                        --°
+                    </h1>
+
+                </div>
+
+            </section>
+
+            
+
+            <section class="weather-details">
+
+                <div class="detail-card">
+                    <p>Feels Like</p>
+                    <h2 id="temperature">--</h2>
+                </div>
+
+                <div class="detail-card">
+                    <p>Humidity</p>
+                    <h2 id="humidity">--</h2>
+                </div>
+
+                <div class="detail-card">
+                    <p>Wind</p>
+                    <h2 id="wind">--</h2>
+                </div>
+
+                <div class="detail-card">
+                    <p>Precipitation</p>
+                    <h2 id="precipitation">--</h2>
+                </div>
+
+            </section>
+
+            <section class="daily-forecast">
+
+                <h2>Daily Forecast</h2>
+
+                <div
+                    id="daily-forecast-list"
+                    class="daily-forecast-list">
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <aside class="hourly-panel">
+
+            <div class="hourly-header">
+
+                <h2>Hourly Forecast</h2>
+
+                <select id="day-select">
+                    <option>Today</option>
+                </select>
+
+            </div>
+
+            <div
+                id="hourly-forecast-list"
+                class="hourly-forecast-list">
+
+            </div>
+
+        </aside>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

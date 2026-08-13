@@ -1,0 +1,401 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(243, 96%, 9%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: background-image 0.5s ease;
+}
+
+
+.container{
+    width:1200px ;
+    margin: 40px auto;
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.logo{
+    
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.logo-icon{
+   font-size: 40px; 
+}
+.logo h2{
+    margin-left: 40px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.units-dropdown{
+    position: relative;
+}
+
+#units-btn{
+    background-color: #2b2949;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+.units-menu{
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 250px;
+    background: #2b2949;
+    padding: 20px;
+    border-radius: 12px;
+    z-index: 100;
+}
+
+.units-menu::before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    height: 15px;
+}
+
+.units-dropdown:hover .units-menu{ 
+    display: block;
+}
+
+.units-menu h3{
+    margin-bottom: 20px;
+    color: white;
+}
+
+.units-menu label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #bbb;
+}
+
+.units-menu select{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b3958;
+    color: white;
+}
+
+.search-section{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.search-section h1{
+    font-size: 60px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+
+.search-box{
+     position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+   
+}
+
+.search-box input{
+    width: 550px;
+    padding: 18px;
+    border: none;
+    border-radius: 14px;
+    background-color: #2b2949;
+    color: white;
+    font-size: 18px;
+}
+
+.search-box input::placeholder{
+    color: #c7c7c7;
+}
+.search-box button{
+    width: 140px;
+    border: none;
+    border-radius: 14px;
+    background-color: #5a67ff;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.search-box button:hover{
+    background: #6d79ff;
+}
+
+#loading-message{
+    margin-top: 15px;
+    color: #89b4ff;
+
+}
+
+#error-message{
+    margin-top: 10px;
+    color: #ff7b7b;
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+}
+
+.hero-card{
+    background-image: url("./assets/images/bg-today-large.svg");
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    min-height: 320px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+ 
+.hero-card h2{
+    font-size: 42px;
+    color: white;
+}
+
+#current-date{
+    margin-top: 15px;
+    color: #ddd;
+    font-size: 18px;
+}
+
+.hero-weather{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-icon{
+    font-size: 70px;
+}
+
+#hero-temperature{
+    font-size: 95px;
+    color: white;
+}
+
+.weather-details{
+     display:grid;
+     grid-template-columns:repeat(4,1fr);
+     gap:20px;
+     margin-bottom:30px;
+}
+
+.detail-card{
+    background:#1b1d45;
+     border-radius:20px;
+      padding:25px;
+       text-align:center;
+       transition:0.3s;
+}
+
+.detail-card:hover{
+     transform:translateY(-5px);
+     background:#25285a;
+}
+
+.detail-card p{
+    color:#b8b8d1;
+    margin-bottom:12px;
+    font-size:15px;
+}
+
+.detail-card h2{
+     font-size:34px;
+      color:white;
+}
+
+
+.daily-forecast{
+    margin-top:30px;
+    
+}
+
+.daily-forecast h2{
+    margin-bottom:20px;
+    font-size:28px;
+    color: white;
+}
+
+.daily-forecast-list{
+     display:grid;
+      grid-template-columns:repeat(7,1fr);
+      gap:15px;
+      
+} 
+
+.forecast-card{
+    color: white;
+     background:#1b1d45;
+     border-radius:18px;
+      padding: 10px;
+       text-align:center;
+       transition:0.3s;
+}
+
+.forecast-card:hover{
+     transform:translateY(-5px);
+    background:#25285a;
+}
+
+.forecast-card div{
+     font-size:42px;
+    margin:12px 0;
+}
+
+.forecast-card p{
+     margin:6px 0;
+    color:#d6d6e7;
+}
+
+.hourly-panel{
+    margin-top: 25px;
+   background-color: hsl(243, 27%, 20%);
+     border-radius:22px;
+     padding: 26px;
+     height:fit-content;
+     margin-left: 15px;
+}
+
+.hourly-header{
+    display:flex;
+     justify-content:space-between;
+     align-items: center;
+     margin-bottom: 25px;
+     color: white;
+}
+
+.hourly-header h2{
+    font-size:24px;
+}
+
+.hourly-header select{
+    background:#2a2d63;
+    color: white;
+    border:none;
+     padding:10px 15px;
+     border-radius:10px;
+}
+
+.hourly-forecast-list{
+     display:flex;
+     flex-direction:column;
+      gap:15px;
+}
+
+.hour-card{
+    background-color:hsl(243, 23%, 30%);
+    border-radius:15px;
+     padding:18px;
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+     transition:.3s;
+}
+
+.hour-card:hover{
+     background:#30357a;
+}
+
+.hour-time{
+    font-size:16px;
+    color:#ddd;
+    margin-right:150px;
+}
+
+.hour-icon{
+     order: -1;
+    font-size:30px;
+}
+
+.hour-temp{
+     font-size:20px;
+    font-weight:bold;
+    color: white;
+}
+
+
+.weather-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.hero-icon .weather-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.forecast-card .weather-icon {
+    width: 35px;
+    height: 35px;
+    
+}
+
+.hour-icon .weather-icon {
+    width: 30px;
+    height: 30px;
+    
+}
+
+#history{
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: calc(50% - 353px);
+    width: 550px;
+    background: #2b2949;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: left;
+    padding: 8px;
+}
+
+#history p{
+    padding: 10px 15px;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    margin: 0;
+    
+}
+
+#history p:hover{
+    background: #3b3958;
+}
